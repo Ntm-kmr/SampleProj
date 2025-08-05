@@ -15,10 +15,27 @@ public class facebookHomePage {
 	}
 	
 	@FindBy(xpath="//img[contains(@src,'fbcdn')]") private WebElement facebookLogo;
+	@FindBy(xpath="//input[@id=\"email\"]") private WebElement emailTextBox;
+	@FindBy(xpath="//input[@id=\"pass\"]") private WebElement passwordTextBox;
+	@FindBy(xpath="//button[@type='submit']") private WebElement sbmtBtn;
+	
 	
 	public boolean facebookLogoisPresent()
 	{
 		return facebookLogo.isDisplayed();
 	}
+	public void enterEmail (String email)
+	{
+		emailTextBox.sendKeys(email);
+	}
+	public void enterPassword (String password)
+	{
+		passwordTextBox.sendKeys(password);
+	}
+	public void sbmitBtn ()
+	{
+		sbmtBtn.click();;
+	}
+	
 
 }
