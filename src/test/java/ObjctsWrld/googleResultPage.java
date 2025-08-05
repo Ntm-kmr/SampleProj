@@ -15,6 +15,10 @@ public class googleResultPage {
 	}
 	
 	@FindBy(xpath="//h3[text()='Facebook - log in or sign up']") private WebElement facebookLink;
+	public boolean facebookLinkisPresent()
+	{
+		return facebookLink.isDisplayed();
+	}
 	
 	public void  clickfbLink()
 
