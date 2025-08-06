@@ -16,8 +16,9 @@ public class googleHomePage {
 	@FindBy(xpath = "//textarea[@title='Search']") private WebElement googlesrchBox;
 	@FindBy(xpath="(//input[@type='submit'])[3]") private WebElement googleSrchBtn;
 	
-	public boolean pageload()
+	public boolean pageload() throws InterruptedException
 	{
+		Thread.sleep(8000);
 		return googleSrchBtn.isDisplayed();
 	}
 	
@@ -25,6 +26,11 @@ public class googleHomePage {
 	{
 		googlesrchBox.sendKeys(TxttoSearch);
 	}
+	public WebElement entr()
+	{
+		return googleSrchBtn;
+	}
+	
 	
 
 }

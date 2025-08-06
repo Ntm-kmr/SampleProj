@@ -34,7 +34,7 @@ public class facebookHomePage {
 	}
 	public void sbmitBtn ()
 	{
-		sbmtBtn.click();;
+		sbmtBtn.click();
 	}
 	
 
